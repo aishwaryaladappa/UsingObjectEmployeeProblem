@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeeWageProblem
+{
+    public static class Switchcase
+    {
+        public const int IS_FULL_TIME = 1;
+        public const int IS_PART_TIME = 2;
+        public const int Emp_RATE_PER_HOUR = 20;
+
+        public static void EmpWageSwitch()
+        {
+
+            int EmpHrs = 0;
+            int Empwage = 0;
+            Random random = new Random();
+            int EmpCheck = random.Next(3);
+
+            switch (EmpCheck)
+            {
+                case IS_FULL_TIME:
+                    EmpHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    EmpHrs = 4;
+                    break;
+                default:
+                    EmpHrs = 0;
+                    break;
+
+            }
+            Empwage = EmpHrs * Emp_RATE_PER_HOUR;
+            Console.WriteLine("EmpWage:" + Empwage);
+
+
+        }
+    }
+}
